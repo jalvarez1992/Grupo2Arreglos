@@ -108,9 +108,7 @@ public class Grupo2Arreglos {
         scanner.close();
     }
 
-    /**
-     * Imprime las opciones del menú en la consola.
-     */
+    //Imprime las opciones del menú en la consola.
     private static void mostrarMenu() {
         System.out.println("\n=== GESTION DE CALIFICACIONES ===");
         System.out.println("1. Agregar calificacion");
