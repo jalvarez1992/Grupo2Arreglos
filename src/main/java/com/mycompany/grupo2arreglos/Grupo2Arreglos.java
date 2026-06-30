@@ -17,16 +17,16 @@ public class Grupo2Arreglos {
             mostrarMenu();
             
             try {
-                System.out.print("Elige una opción: ");
+                System.out.print("Elige una opcion: ");
                 int opcion = scanner.nextInt();
 
                 switch (opcion) {
                     case 1:
-                        System.out.print("Ingresa la nueva calificación: ");
+                        System.out.print("Ingresa la nueva calificacion: ");
                         double nuevaNota = scanner.nextDouble();
                         // El gestor lanza excepción si la nota es inválida
                         gestor.agregarCalificacion(nuevaNota);
-                        System.out.println("Calificación agregada exitosamente.");
+                        System.out.println("Calificacion agregada exitosamente.");
                         break;
 
                     case 2:
@@ -34,19 +34,19 @@ public class Grupo2Arreglos {
                             System.out.println("No hay calificaciones registradas.");
                             break;
                         }
-                        System.out.print("Ingresa el índice (0 a " + (gestor.cantidadCalificaciones() - 1) + ") a eliminar: ");
+                        System.out.print("Ingresa el indice (0 a " + (gestor.cantidadCalificaciones() - 1) + ") a eliminar: ");
                         int indice = scanner.nextInt();
                         double eliminada = gestor.eliminarCalificacion(indice);
-                        System.out.println("Se eliminó la calificación: " + eliminada);
+                        System.out.println("Se elimino la calificacion: " + eliminada);
                         break;
 
                     case 3:
                         System.out.print("Ingresa la calificación que deseas buscar: ");
                         double notaBuscar = scanner.nextDouble();
                         if (gestor.buscarCalificacion(notaBuscar)) {
-                            System.out.println("🔍 La calificación " + notaBuscar + " SÍ está en la lista.");
+                            System.out.println("La calificacion " + notaBuscar + " Si está en la lista.");
                         } else {
-                            System.out.println("La calificación " + notaBuscar + " NO se encontró.");
+                            System.out.println("La calificacion " + notaBuscar + " NO se encontro.");
                         }
                         break;
 
@@ -57,7 +57,7 @@ public class Grupo2Arreglos {
                             System.out.println("\n--- Lista de Calificaciones ---");
                             ArrayList<Double> lista = gestor.obtenerTodas();
                             for (int i = 0; i < lista.size(); i++) {
-                                System.out.println("Índice [" + i + "] -> " + lista.get(i));
+                                System.out.println("Indice [" + i + "] -> " + lista.get(i));
                             }
                         }
                         break;
@@ -74,7 +74,7 @@ public class Grupo2Arreglos {
                         if (gestor.estaVacia()) {
                             System.out.println("No hay datos.");
                         } else {
-                            System.out.println("La nota más alta es: " + gestor.obtenerNotaMasAlta());
+                            System.out.println("La nota mas alta es: " + gestor.obtenerNotaMasAlta());
                         }
                         break;
 
@@ -82,7 +82,7 @@ public class Grupo2Arreglos {
                         if (gestor.estaVacia()) {
                             System.out.println("No hay datos.");
                         } else {
-                            System.out.println("La nota más baja es: " + gestor.obtenerNotaMasBaja());
+                            System.out.println("La nota mas baja es: " + gestor.obtenerNotaMasBaja());
                         }
                         break;
 
@@ -92,16 +92,16 @@ public class Grupo2Arreglos {
                         break;
 
                     default:
-                        System.out.println("Opción no válida. Intenta de nuevo.");
+                        System.out.println("Opcion no valida. Intenta de nuevo.");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Error de formato: Debes ingresar un número. (Evita usar letras)");
                 scanner.nextLine(); // Limpiamos el buffer del teclado
             } catch (IllegalArgumentException | IndexOutOfBoundsException e) {
                 // Capturamos las excepciones de lógica lanzadas por el Gestor
-                System.out.println("Error lógico: " + e.getMessage());
+                System.out.println("Error logico: " + e.getMessage());
             } catch (Exception e) {
-                System.out.println("Ocurrió un error inesperado: " + e.getMessage());
+                System.out.println("Ocurrio un error inesperado: " + e.getMessage());
                 scanner.nextLine();
             }
         }
