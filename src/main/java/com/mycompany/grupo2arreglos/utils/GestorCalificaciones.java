@@ -20,7 +20,7 @@ public class GestorCalificaciones {
     //@param nota La calificación a agregar.
     public void agregarCalificacion(double nota) {
         if (nota < 0 || nota > 100) {
-            throw new IllegalArgumentException("La calificación debe estar entre 0 y 100.");
+            throw new IllegalArgumentException("La calificacion debe estar entre 0 y 100.");
         }
         calificaciones.add(nota);
     }
@@ -30,7 +30,7 @@ public class GestorCalificaciones {
     //@return La calificación que fue eliminada.
     public double eliminarCalificacion(int indice) {
         if (indice < 0 || indice >= calificaciones.size()) {
-            throw new IndexOutOfBoundsException("Índice fuera de rango.");
+            throw new IndexOutOfBoundsException("Indice fuera de rango.");
         }
         return calificaciones.remove(indice);
     }
