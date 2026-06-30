@@ -112,14 +112,14 @@ public class Grupo2Arreglos {
      * Imprime las opciones del menú en la consola.
      */
     private static void mostrarMenu() {
-        System.out.println("\n=== GESTIÓN DE CALIFICACIONES ===");
-        System.out.println("1. Agregar calificación");
-        System.out.println("2. Eliminar calificación");
-        System.out.println("3. Buscar una calificación");
+        System.out.println("\n=== GESTION DE CALIFICACIONES ===");
+        System.out.println("1. Agregar calificacion");
+        System.out.println("2. Eliminar calificacion");
+        System.out.println("3. Buscar una calificacion");
         System.out.println("4. Mostrar todas las calificaciones");
         System.out.println("5. Calcular el promedio");
-        System.out.println("6. Determinar la nota más alta");
-        System.out.println("7. Determinar la nota más baja");
+        System.out.println("6. Determinar la nota mas alta");
+        System.out.println("7. Determinar la nota mas baja");
         System.out.println("8. Salir");
     }
 }
